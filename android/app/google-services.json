@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "926040853742",
+    "project_id": "sports-sync-2a670",
+    "storage_bucket": "sports-sync-2a670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926040853742:android:49bef151c82d3a5aadf7ff",
+        "android_client_info": {
+          "package_name": "com.example.sports_sync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7tyGcB1Z3xVtQ3-FMyUvfyC3VKG3qyDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
