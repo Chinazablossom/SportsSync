@@ -7,14 +7,16 @@ class BuddiesScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffc5cbce),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
+      body: Expanded(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
 
-          children: [
-            Image.asset("assets/imgs/buddies.png",height: 700,width: 700,)
-        ],
+            children: [
+              Image.asset("assets/imgs/buddies.png",height: 700,width: 700,)
+          ],
+        ),
       ),
     );
   }

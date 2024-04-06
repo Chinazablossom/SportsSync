@@ -11,7 +11,7 @@ class LoginController extends GetxController {
 
 
   final revealPassword = false.obs;
-  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+
 
   /// LOADERS
   final isLoading = false.obs;
@@ -20,14 +20,10 @@ class LoginController extends GetxController {
 
     try{
       isLoading.value = true;
-      if(!loginFormKey.currentState!.validate()){
-        isLoading.value = false;
-        return;
-      }
 
       final authentication = AuthenticationRepository.instance;
       await authentication.loginSportsUserWithEmailAndPassword(loginEmail.text.trim(), loginPassword.text.trim());
-      authentication.setScreen(authentication.sportSyncUser);
+
     }catch(e){
       isLoading.value = false;
       Get.snackbar("Opps..", e.toString());

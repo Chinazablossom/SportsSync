@@ -1,11 +1,14 @@
 
 import 'package:get/get.dart';
+import 'package:sports_sync/authentication/model/user_model.dart';
 import 'package:sports_sync/repository/auth_repo/authentication_repository.dart';
 import 'package:sports_sync/repository/user_repo/user_repository.dart';
 
 class ProfileController extends GetxController {
   static ProfileController get instance => Get.find();
 
+
+  /// REPOSITORIES
   final _authRepo = Get.put(AuthenticationRepository());
   final _userRepo = Get.put(UserRepository());
 
@@ -21,5 +24,15 @@ class ProfileController extends GetxController {
     }
     
   }
+
+
+  ///   UPDATE USER LOGIC
+  updateUserInfo(UserModel user) async {
+
+    await _userRepo.updateUserRecord(user);
+
+  }
+
+
 
 }

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class LargeButton extends StatelessWidget {
   const LargeButton({
-    super.key, required this.label, required this.onTap,
+    super.key,
+    required this.label,
+    required this.onTap,
   });
 
   final VoidCallback onTap;
@@ -18,8 +20,9 @@ class LargeButton extends StatelessWidget {
           color: Colors.black,
           borderRadius: BorderRadius.circular(8),
         ),
-        child:  Center(
-          child: Text(label,
+        child: Center(
+          child: Text(
+            label,
             style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,

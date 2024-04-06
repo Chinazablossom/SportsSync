@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:sports_sync/authentication/controllers/OTP_controller.dart';
 
-import '../../controllers/Sign_Up_Controller.dart';
 import '../../../widgets/LargeButton.dart';
+import '../../controllers/Sign_Up_Controller.dart';
 
 class SignUpPhoneVerificationOTP extends StatelessWidget {
   const SignUpPhoneVerificationOTP({super.key});
@@ -25,13 +23,23 @@ class SignUpPhoneVerificationOTP extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(height: 100,),
-                const Icon(Icons.phone_android_outlined,size: 170),//"OTP", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 80 )),
-                const SizedBox(height: 20,),
-                 Text("Lets Verify your phone number, Enter the code sent to ${signUpController.signUpPhoneNumber.text}",textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w700)),
+                const SizedBox(
+                  height: 100,
+                ),
+                const Icon(Icons.phone_android_outlined, size: 170),
+                //"OTP", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 80 )),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                    "Lets Verify your phone number, Enter the code sent to ${signUpController.signUpPhoneNumber.text}",
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w700)),
 
-                const SizedBox(height: 50,),
+                const SizedBox(
+                  height: 50,
+                ),
 
                 OtpTextField(
                   keyboardType: TextInputType.number,
@@ -39,26 +47,20 @@ class SignUpPhoneVerificationOTP extends StatelessWidget {
                   fillColor: Colors.black.withOpacity(0.1),
                   filled: true,
                   onSubmit: (code) {
-                   otp = code;
-                   OTPController.instance.verifyOTP(otp);
+                    otp = code;
+                    OTPController.instance.verifyOTPSignUp(otp);
                   },
                 ),
-                const SizedBox(height: 50,),
-
-
+                const SizedBox(
+                  height: 50,
+                ),
 
                 //  VERIFICATION BTN
-                LargeButton(label: "Verify", onTap: () {
-                  OTPController.instance.verifyOTP(otp);
-                 // SignUpAndLoginController.instance.phoneAuthentication(signUpController.phoneNumberSignUp.text);
-
-                })
-
-
-
-
-
-
+                LargeButton(
+                    label: "Verify",
+                    onTap: () {
+                      OTPController.instance.verifyOTPSignUp(otp);
+                    })
               ],
             ),
           ),
@@ -66,5 +68,4 @@ class SignUpPhoneVerificationOTP extends StatelessWidget {
       ),
     );
   }
-  
 }

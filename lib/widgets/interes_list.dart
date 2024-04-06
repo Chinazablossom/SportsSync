@@ -4,12 +4,10 @@ import 'package:sports_sync/widgets/intrests_item.dart';
 
 class InterestListBuilder extends StatelessWidget {
   const InterestListBuilder(this.interests,
-      // this.onRemoveExpense,
           {super.key,});
 
   final List<Interest> interests;
 
-  // final void Function(Expense expense) onRemoveExpense;
 
   @override
   Widget build(BuildContext context) {

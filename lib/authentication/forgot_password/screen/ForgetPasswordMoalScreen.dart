@@ -10,7 +10,7 @@ class ForgetPasswordScreen{
 
  static Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
     return showModalBottomSheet(
-      context: context,backgroundColor: Color(0xffdae1e5),
+      context: context,backgroundColor: const Color(0xffdae1e5),
       builder: (context) => Container(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -30,7 +30,7 @@ class ForgetPasswordScreen{
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  Get.to(() => ForgetMailScreen());
+                  Get.to(() => const ForgetMailScreen());
 
                 }),
             const SizedBox(
@@ -43,7 +43,7 @@ class ForgetPasswordScreen{
                 ),
                 onTap: () {
                   Navigator.pop(context);
-                  Get.to(() => ForgetPhoneScreen());
+                  Get.to(() => const ForgetPhoneScreen());
                 }),
           ],
         ),

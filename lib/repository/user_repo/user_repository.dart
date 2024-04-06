@@ -11,7 +11,7 @@ class UserRepository extends GetxController {
   /// STORES USER IN FIRESTORE
   createUser(UserModel user) async {
     await _db.collection("Users").add(user.mapUserInfoToJson()).whenComplete(
-            () => Get.snackbar("Success", "Your account has been created.",
+            () => Get.snackbar("Congratulations", "Your account has been created. Veryfy email to contiue",
             snackPosition: SnackPosition.BOTTOM
             )
     ).catchError((error,stackTrace) {
@@ -36,8 +36,8 @@ class UserRepository extends GetxController {
 
   ///  UPDATE USER RECORD
 
-Future<void> updateUserRecord(UserModel) async {
-    
+Future<void> updateUserRecord(UserModel user) async {
+    await _db.collection("Users").doc(user.userId).update(user.mapUserInfoToJson());
 }
 
 

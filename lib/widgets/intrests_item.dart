@@ -13,16 +13,12 @@ class InterestItem extends StatelessWidget {
       margin: const EdgeInsets.all(9),
       child:  Padding(
         padding: const EdgeInsets.all(16.0),
-        child: InkWell(
-            onTap: () {
-              /// ADD TO USER DATA
-            },
-            child: Text(
+        child:  Text(
               interest.title,
               style: const TextStyle(
                   color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18),
             )),
-      ),
+
     );
   }
 }

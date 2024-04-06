@@ -8,13 +8,15 @@ class DiscoverScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffc5cbce),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Image.asset("assets/imgs/discover.png",height: 700,width: 700,)
-        ],
+      body: Expanded(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Image.asset("assets/imgs/discover.png",height: 700,width: 700,)
+          ],
+        ),
       ),
     );
   }
